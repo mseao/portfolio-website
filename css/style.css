@@ -4,6 +4,10 @@ Primary Color (Black): #1e1d22;
 Secondary Color (White): #ffffff;
 */
 
+* {
+  box-sizing: border-box;
+}
+
 header {
   background-color: #ffe4c4;
   text-align: center;
