@@ -178,7 +178,7 @@ nav > ul > li > a {
 .navtoggle li .icon {
   position: absolute;
   right: 0px;
-  left: 325px;
+  left: 425px;
   top: 12px;
   font-size: 20px;
 }
@@ -490,4 +490,4 @@ X-large devices (1440px or larger)
     }
 
 
-  }
+}
