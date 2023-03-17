@@ -9,24 +9,24 @@ Secondary Color (White): #ffffff;
 }
 
 header {
-  background-color: #ffe4c4;
-  text-align: center;
-  padding: 10px 0;
+  background-color: #17252a;
+  padding: 25px 0;
   margin: 10 px;
   box-shadow: 0px 6px 11px 1px rgba(0,0,0,0.2);
   -webkit-box-shadow: 0px 6px 11px 1px rgba(0,0,0,0.2);
   -moz-box-shadow: 0px 6px 11px 1px rgba(0,0,0,0.2);
   position: fixed;
   width: 100%;
+  color: #feffff
 }
 
 body {
-    background-color: #ffffff;
+    background-color: #feffff;
     font-family: 'Hind Madurai', sans-serif;
     font-size: 16px; /* Sets the font size to 16px */
     font-weight: 300; /* Sets the font weight to 300 */
     line-height: 1.6; /* Sets the line-height to 1.6 * the font-size */
-    color: #1e1d22;
+    color: #17252a;
   }
   
   h1, h2, h3, h4 {
@@ -60,7 +60,7 @@ a {
   text-decoration: none; /* No underlining */
 }
 a:hover {
-  color: #cc6540;
+  color: #3aafa9;
   text-decoration: underline; /* Underlining when hovering over a link */
 }
 
@@ -73,19 +73,20 @@ a:visited { /* visited link */
 
   a:hover,
 a:focus {
-  color: #cc6540;
+  color: #3aafa9;
   text-decoration: underline;
 }
 
 .button {
-    display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
-    background-color: #ff7f50;
-    color: #ffffff; /* needed to override the default link color */
+    display: inline-block; 
+    background-color: #2b7a78;
+    color: #ffffff; 
     font-weight: 400;
+    text-decoration: none;
     padding: 10px;
     border-radius: 3px;
-    border-bottom: 2px solid #994c30; /* width of the border, type, color */
-    transition: 0.2s opacity;
+    border-bottom: 2px solid #17252a; /* width of the border, type, color */
+    transition: 0.2s opacity; 
   }
 
   .button:hover {
@@ -95,15 +96,17 @@ a:focus {
 
   .button.contact {
     background-color: transparent;
-    color: #ffb500;
+    color: #2b7a78;
     text-transform: uppercase;
-    border: 2px solid #ffb500;
+    border: 2px solid #2b7a78;
   }
 
   .button.contact:hover {
-    background-color: #ffb500;
+    background-color: #2b7a78;
     color: #ffffff;
   }
+
+
 
 /* Layout styling */
 
@@ -113,6 +116,18 @@ a:focus {
 
 .row {
   margin: 25px 0; /* 25px top and bottom, 0 left and right */
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 5px;
 }
 
 #work .row {
@@ -126,16 +141,13 @@ a:focus {
 }
 
 .logo {
-  max-width: 250px;
+  max-width: 150px;
 }
 
 nav > ul {
   list-style-type: none;
   padding: 0;
-}
-
-nav > ul > li {
-  display: inline-block;
+  margin: 0;
 }
 
 nav > ul > li > a {
@@ -146,12 +158,46 @@ nav > ul > li > a {
   width: 100%;
 }
 
+.navtoggle li:not(:last-child) {
+  display: none;
+}
+
+.navtoggle, .navtoggle.responsive {
+  position: relative;
+}
+
+.navtoggle.responsive nav {
+  padding: 24px 0 0;
+}
+
+.navtoggle.responsive li  {
+  display: block;
+  padding: 10px 0;
+  border-top: 1px solid rgba(255,127,80,0.5);
+}
+
+.navtoggle.responsive li:last-child  {
+  padding: 0 0 10px;
+}
+
+.navtoggle li .icon {
+  position: absolute;
+  right: 0px;
+  left: 325px;
+  top: 12px;
+  font-size: 20px;
+}
+
 #hero {
-  background-color: #ffe4c4;
+  background-color: #3aafa9;
+}
+
+#hero span {
+  display: block;
 }
 
 main {
-  padding-top: 169.52px;
+  padding-top: 106px;
 }
 
 #project-title h1 {
@@ -167,4 +213,281 @@ main {
 
 footer {
   text-align: center;
+  }
+
+#berlin-illustration {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+@keyframes color-change {
+  0% {fill: #edc655;}
+  50% {fill: #fcffad;}
+  100% {fill: #f76414;}
+}
+
+@keyframes cloud-move {
+  from {transform: translate(0,50px);}
+  to {transform: translate(200px,50px);}
+}
+
+@keyframes cloud-move-reverse {
+  from {transform: translate(446px,48px);}
+  to {transform: translate(100px, 48px);}
+}
+
+.sun {
+  animation-duration: 4s;
+  animation-name: color-change;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+.cloud-front {
+  animation-duration: 30s;
+  animation-name: cloud-move;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
+  
+  /* ==============================
+Medium devices (640px and larger)
+================================= */
+@media only screen and (min-width: 640px) {
+    .content {
+        margin-top: -25px;
+    }
+
+    header {
+        text-align: unset;
+        padding: 20px 0 13px;
+    }
+
+    nav {
+        width: auto;
+        float: right;
+        margin-top: 4px;
+    }
+
+    nav>ul {
+        margin: 1em 0;
+    }
+
+    nav>ul>li {
+        display: inline-block;
+    }
+
+    nav>ul>li>a {
+    font-family: 'Hind Madurai', sans-serif;
+        font-size: 16px;
+        color: #4a4a4a;;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+        padding: 0;
+        margin: 0 15px;
+        text-transform: uppercase;
+    }
+
+    nav>ul>li>a:hover {
+        color: #6e0739;
+        border-bottom: 3px solid #000000;
+    }
+
+    .navtoggle li:not(:last-child) {
+        display: inline-block;
+    }
+
+    .navtoggle li:last-child {
+        display: none;
+    }
+
+    .navtoggle.responsive li {
+        border-top: 0 solid white;
+    }
+
+    main {
+        padding-top: 109px;
+    }
+
+
+    body {
+        font-size: 16px;
+    }
+   
+    .logo {
+      max-width: 250px;
+    }
+
+    .about img {
+        width: 85%;
+        margin-bottom: 15px;
+    }
+    .about h3{
+        margin-top: 25px;
+    }
+
+    #contact p {
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        padding: 10px 0;
+        line-height: 1.5;
+        margin: 0;
+    }
+
+    .col-md-6 {
+        width: 50%;
+    }
+
+    [class*="col-"] {
+        float: left;
+        padding: 0 15px;
+    }
+
+    .row::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    footer .container {
+        padding: 50px 15px;
+    }
+
+    .img1 {
+      max-width: 25%;
+    }
+  
+    .img2 {
+      max-width: 50%;
+    }
+  
+    .img3 {
+      max-width: 75%;
+    }
+  
+    .img1center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 25%;
+      max-height: auto;
+    }
+  
+    .img2center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 50%;
+      max-height: auto;
+    }
+  
+    .img3center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 75%;
+      max-height: auto;
+    }
+  
+    .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 50%
+    }
+  
+    .userresearch_2 {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 99%
+    }
+
+
+
+/* ==============================
+Large devices (1024px or larger)
+================================= */
+@media only screen and (min-width: 1024px) {}
+
+.container {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    header {
+        text-align: unset;
+        padding: 20px 0 13px;
+    }
+
+    .logo {
+        max-width: 150px;
+        padding: 0;
+        margin: 10px 10px;
+    }
+
+    nav {
+        width: auto;
+        float: right;
+        margin-top: 4px;
+    }
+
+
+nav>ul>li>a {
+    font-family: 'Hind Madurai', sans-serif;
+        font-size: 16px;
+       color: #4a4a4a;;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+        padding: 0;
+        margin: 0 15px;
+        text-transform: uppercase;
+    }
+
+
+    [class*="col-"] {
+      float: left;
+      padding: 10px;
+}
+
+
+
+
+/* ==============================
+X-large devices (1440px or larger)
+================================= */
+@media only screen and (min-width: 1440px) {
+
+    .container {
+        max-width: 87%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    nav {
+        width: auto;
+        float: right;
+        margin-top: 4px;
+    }
+
+    nav>ul>li>a {
+     font-family: 'Hind Madurai', sans-serif;
+        font-size: 16px;
+       color: #4a4a4a;;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+        padding: 0;
+        margin: 0 15px;
+        text-transform: uppercase;
+    }
+
+
   }
