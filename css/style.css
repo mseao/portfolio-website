@@ -56,7 +56,7 @@ body {
   }
 
 a {
-  color: #ffffff;
+  color: #feffff;
   text-decoration: none; /* No underlining */
 }
 a:hover {
@@ -65,10 +65,10 @@ a:hover {
 }
 
 a:visited { /* visited link */
-    color: #ffffff;
+    color: #feffff;
   }
   a:active { /* selected link */
-    color: #994c30;
+    color: #c0d5dd;
   }
 
   a:hover,
@@ -406,7 +406,7 @@ nav>ul>li>a {
 .column {
   float: left;
   width: 50%;
-  padding: 5px;
+  padding: 50px;
 }
 
 .img1 {
