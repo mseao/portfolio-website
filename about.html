@@ -46,17 +46,19 @@
           <h1>About Me</h1>
         </div>
       </div>
-      <div>
-        <picture>
-          <source
-            srcset="img/profilepicture_placeholder.jpg"
-            media="(max-width:767px)"
-          >
-          <img src="img/profilepicture_placeholder.jpg" alt="Profile Picture" class="img1center">
-        </picture>
-      </div>
       <div id="about">
         <div class="container">
+          <div class="row">
+          <div>
+            <picture>
+              <source
+                srcset="img/profilepicture_placeholder.jpg"
+                media="(max-width:767px)"
+              >
+              <img class="column col-md-6 col-lg-7" src="img/profilepicture_placeholder.jpg" alt="Profile Picture" class="img1center">
+            </picture>
+          </div>
+          <div class="column col-md-6 col-lg-7">
           <h2>My Story</h2>
           <p>
             My name is Matthew and I am a UX Designer based in Columbus, OH. I
@@ -64,6 +66,8 @@
             is, I knew it would be a perfect fit for me.
           </p>
           <a href="files/resume.pdf" target="_blank" class="button">Download My Resume</a>
+          </div>
+        </div>
           <div>
             <h2>Skills & Tools</h2>
             <div class="row">
