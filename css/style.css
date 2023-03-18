@@ -43,11 +43,11 @@ body {
   
   h3 {
     font-size: 1.75em;
-    font-weight: 400;
+    font-weight: 700;
   }
   h4 {
     font-size: 1.35em;
-    font-weight: 400;
+    font-weight: 700;
   }
 
   img {
@@ -104,6 +104,10 @@ a:focus {
     background-color: #2b7a78;
     color: #ffffff;
   }
+
+#about-title {
+  text-align: center;
+}
 
 /* Layout styling */
 
@@ -179,7 +183,7 @@ nav > ul > li > a:active {
 }
 
 .navtoggle.responsive li:last-child  {
-  padding: 0 0 16px;
+  padding: 0 0 10px;
 }
 
 .navtoggle li .icon {
